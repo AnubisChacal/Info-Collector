@@ -40,7 +40,7 @@ fn get_username() -> String {
 
 fn send_post_request(data: &MachineInfo) -> Result<(), reqwest::Error> {
     let client = Client::new();
-    let url = "http://54.188.38.67:8080/";
+    let url = "http://<IP:PORT>/";
 
     let response = client.post(url)
         .header(CONTENT_TYPE, "application/json")
